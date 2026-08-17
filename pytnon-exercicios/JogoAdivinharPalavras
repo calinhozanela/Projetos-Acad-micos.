@@ -1,0 +1,66 @@
+import random
+# Códigos ANSI para cores
+RED = "\033[31m"
+GREEN = "\033[32m"
+YELLOW = "\033[33m"
+BLUE = "\033[34m"
+MAGENTA = "\033[35m"
+CYAN = "\033[36m"
+RESET = "\033[0m"
+
+print(f"{YELLOW}={RESET}"*40)
+print(f"{GREEN}BEM VINDO AO JOGO DA FORCA!{RESET}".center(50))
+print(f"{YELLOW}={RESET}"*40)
+
+# Lista de palavras pré-definidas para o jogo
+palavras = ["PYTHON", "PROGRAMACAO", "ESTRUTURA", "COMPUTADOR", "VARIAVEL"]
+
+def inicializar_jogo():
+    palavra_secreta = random.choice(palavras)
+    palavra_oculta = ["_"] * len(palavra_secreta)
+
+    letras_tentadas = set()
+    return palavra_secreta, palavra_oculta, letras_tentadas
+
+def processar_tentativas (letra, palavra_secreta, palavra_oculta, letras_tentadas):
+    letras_tentadas.add(letra)
+
+    if letra in palavra_secreta:
+        for i in range(len(palavra_secreta)):
+            if palavra_secreta [i] == letra:
+               palavra_oculta [i] = letra
+
+    return palavra_oculta, letras_tentadas
+
+# Inicializa o jogo
+palavra_secreta,palavra_oculta, letras_tentadas = inicializar_jogo()
+tentativas = 0
+max_tentativa = 8
+
+# Laço principal — roda enquanto houver tentativas e lacunas na palavra
+while tentativas < max_tentativa and '_' in palavra_oculta:
+    print("Palavra:", ' '.join(palavra_oculta))
+    print("\nLetras tentadas:", ', '.join(sorted(letras_tentadas)))
+    #print("Letras tentadas:", letras_tentadas)
+
+    letra = input("Digite uma letra: ").upper()
+    if letra in letras_tentadas:
+        print("Você ja tentou essa letra, tente outra diferente! ")
+    else:
+        palavra_oculta, letras_tentadas = processar_tentativas(letra,palavra_secreta, palavra_oculta, letras_tentadas)
+        
+        if letra not in palavra_secreta:
+            tentativas += 1
+            print(f"Essa letra não está na palavra. Tentativas restantes: {max_tentativa - tentativas}")
+        else:
+            print("Boa! A letra tem na palavra.")
+
+# Verifica resultado final
+if '_' not in palavra_oculta:
+    print(f"\nPARABÉNS! Você venceu o jogo: 🎉🏆 ")
+    print(f"A palavra secreta era: ", palavra_secreta) 
+    print(" OBRIGADO POR PARTICIPAR DO DESAFIO 😎 ".center(60, "="))             
+else:
+    print("GAME OVER! Você usou todas as tentativas:")
+    print("A palavra secreta é: ", palavra_secreta)
+    print(" OBRIGADO POR PARTICIPAR DO DESAFIO 😎 ".center(60, "="))
