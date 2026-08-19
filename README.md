@@ -1,4 +1,7 @@
-![Banner do Portfólio](./Banner_GitHub.png)
+<p align="center">
+  <img src="./Banner_GitHub.png" alt="Banner do Portfólio" width="800">
+</p>
+
 # Portfólio Acadêmico – Carlos Zanela
 
 Bem-vindo ao meu portfólio digital!  
