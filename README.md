@@ -1,4 +1,4 @@
-
+![Banner do Portfólio](./Banner_GitHub.png)
 # Portfólio Acadêmico – Carlos Zanela
 
 Bem-vindo ao meu portfólio digital!  
