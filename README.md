@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./Banner_GitHub.png" alt="Banner do Portfólio" width="800">
+  <img src="./Banner_GitHub.png" alt="Banner do Portfólio" width="600">
 </p>
 
 # Portfólio Acadêmico – Carlos Zanela
