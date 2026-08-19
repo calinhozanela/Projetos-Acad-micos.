@@ -1,9 +1,6 @@
 <p align="center">
   <img src="./Banner_GitHub.png" alt="Banner do Portfólio" width="800">
 </p>
-<p align="center">
-  <img src="./Banner_GitHub.png" alt="Banner do Portfólio" width="800">
-</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
