@@ -27,7 +27,8 @@ Este repositório é parte do meu aprendizado e evolução na área de TI.
 ---
 
 ## 🚀 Projetos Acadêmicos
-- [Exercícios de Programação em Python](./python-exercicios)  
+- [Exercícios de Programação em Python](./python-exercicios)
+- https://www.figma.com/design/xT4v1QIgJ37fHl3L302p9W/Exerc%C3%ADcio2?node-id=0-1&t=I8861tir19K2GMAi-1
   Pequenos programas e desafios para praticar lógica de programação.
 - [Prototipagem de Sistemas Computacionais](./prototipagem)  
   Modelos e protótipos de interfaces criados para estudo de usabilidade.
